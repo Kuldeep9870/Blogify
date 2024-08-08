@@ -15,8 +15,8 @@ env.config();
 const app = express();
 const port =process.env.PORT;
 
-
-mongoose.connect(process.env.URL)
+let url = process.env.URL
+mongoose.connect(url);
 
 app.set('view engine','ejs');
 app.set("views",path.resolve('./views'));
